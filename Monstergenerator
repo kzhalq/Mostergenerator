@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+void MonsterGen();
+
+int main() {
+    char input;
+    while (1) {
+        
+        MonsterGen();
+        cout << "press any key to continue..." << endl;
+        cin >> input;
+    }
+
+}
+
+void MonsterGen() {
+    int num = rand() % 100;
+    if (num < 15)
+        cout << " A witch spawned." << endl;
+    else if (num < 20)
+        cout << "A skeleton appeared!" << endl;
+    else if (num < 50)
+        cout << "An ALIEN appears!" << endl;
+    else if (num < 75)
+        cout << "A zombie has appeared!" << endl;
+    else
+        cout << "Cookie monster appears!" << endl;
+}
